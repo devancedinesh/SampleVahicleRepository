@@ -1,5 +1,7 @@
 package com.dksoft.org.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +18,18 @@ public class ManufacturerServiceImpl implements ManufacturerService {
 	public Manufacturer saveManufacturer(Manufacturer manufacturer) {
 		Manufacturer savedManufacturere = manufacturerRepository.save(manufacturer);
 		return savedManufacturere;
+	}
+
+	@Override
+	public Manufacturer findManufacturerById(int id) {
+		Manufacturer receivedManufaturer = manufacturerRepository.findById(id).get();
+		return receivedManufaturer;
+	}
+
+	@Override
+	public List<Manufacturer> findAllManufacturer() {
+		List<Manufacturer> ListOfAllManufacturer = manufacturerRepository.findAll();
+		return ListOfAllManufacturer;
 	}
 
 }
