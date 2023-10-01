@@ -10,6 +10,7 @@ public class VahicleRestApiDeveloperApplication {
 		
 		SpringApplication.run(VahicleRestApiDeveloperApplication.class, args);
 		System.out.println("This is the best Or Super programming language in the world for me.");
+		System.out.println("Now we are adding the second line of the git testing code.");
 	}
 
 }
